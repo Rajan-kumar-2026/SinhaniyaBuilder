@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">Name: <span class="abc">*</span> </label>
+                <input type="text" class="form-control" placeholder="Enter Your Name" (keyup)='onNameChanged()' [(ngModel)]='clientdetail.name'>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group mt-4">
+                <label for="">Village: <span class="abc">*</span> </label>
+                <input type="text" (keyup)='onVillagedChanged()'  class="form-control" placeholder="Enter Your Village" [(ngModel)]='clientdetail.village'>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">District: <span class="abc">*</span></label>
+                <select (change)='onDistrictChanged()' class="form-control" [(ngModel)]='clientdetail.district'>
+                    <option value="undefined">Select Your District</option>
+                    <option [value]="dist" *ngFor='let dist of districts'> {{dist}} </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">Mobile Number: <span class="abc">*</span></label>
+                <input (keyup)='onMobileNumberChanged()' type="text" class="form-control" placeholder="Enter Your Mobile Number" [(ngModel)]='clientdetail.mobileNumber'>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">State: <span class="abc">*</span></label>
+                <select (change)='onStateChanged()' class="form-control" [(ngModel)]='clientdetail.state'>                 
+                    <option value="undefined">Select Your State</option>
+                    <option [value]="state" *ngFor='let state of states'> {{state}} </option>                   
+                </select>
+            </div>
+        </div>
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">EmailId: <span class="abc">*</span></label>
+                <input (keyup)='onEmailIdChanged()' type="text" class="form-control" placeholder="Enter Your Email Address" [(ngModel)]='clientdetail.emailId'>
+            </div>
+        </div>      
+    </div>
+    <div class="row">
+        <div class="col-4 mt-4"> 
+            <div class="form-group">
+                <label for="">Age: <span class="abc">*</span></label>
+                <select name="" id="" class="form-control" [(ngModel)]='clientdetail.age'>
+                    <option value="undefined" class="">Select Your Age</option>
+                    <option [value]="age" class="" *ngFor='let age of ages'> {{age}} </option>
+                    <option value="" class=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="col-4 mt-4">
+            <div class="form-group">
+                <label for="">Date: <span class="abc">*</span></label>
+                <input (change)='onDateChanged()' type="date" class="form-control" [(ngModel)]='clientdetail.date'>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button (click)='submit()' >Save</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf='showResult'> 
+   name= {{clientdetail.name}}
+   Village= {{clientdetail.village}}
+   Age= {{clientdetail.age}}
+   District= {{clientdetail.district}}
+   Mobile= {{clientdetail.mobileNumber}}
+   Date={{clientdetail.date}}
+   State = {{clientdetail.state}}
+   EmailId= {{clientdetail.emailId}}
+
+</div>

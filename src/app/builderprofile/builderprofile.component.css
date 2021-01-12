@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    background-color:  #1c37923f;
+    padding: 20px;
+    justify-content: center;
+    justify-content:flex-end;
+    color: wheat;
+}

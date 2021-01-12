@@ -1,0 +1,7 @@
+<app-clientdetail [name]='clientDetail.name' [village]='clientDetail.village' [mobileNumber]='clientDetail.mobileNumber'
+    [state]='clientDetail.state' [emailId]='clientDetail.emailId' [date]='clientDetail.date'
+    [district]='clientDetail.district' (nameChanged)='onDateChanged($event)' (villageChanged)='onVillageChanged($event)'
+    (mobileNumberChanged)='onMobileNumberChanged($event)' (statesChanged)='onStateChanged($event)'
+    (emailIdChanged)='onEmailIdChanged($event)' (dateChanged)='onDateChanged($event)'
+    (districtChanged)='onDistrictChanged($event)'>
+</app-clientdetail>
