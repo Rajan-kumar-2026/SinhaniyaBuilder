@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-4">
+            <label for="">Register with us</label>
+            <input type="text" class="form-control" placeholder="Email" [(ngModel)]='email'>&nbsp;&nbsp;
+            <input type="password" class="form-control" placeholder="Password" [(ngModel)]='password'>&nbsp;&nbsp;
+            <input type="password" class="form-control" placeholder="Confirm password" [(ngModel)]='confirmPassword'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-4">
+            <button (click)='registerNew()'>CREATE ACCOUNT</button>
+        </div>
+    </div>
+</div>

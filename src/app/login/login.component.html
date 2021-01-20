@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="">Login</label>
+                <input type="text" class="form-control" placeholder="Email" [(ngModel)]='userName'> &nbsp;&nbsp;
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]='password'> &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button mt-4 (click)='login()'>SIGN IN</button> 
+        </div>
+    </div>
+</div>

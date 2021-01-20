@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SinghaniyaBuilder';
+  isLoggedIn: boolean = !!localStorage.getItem('token');
+
+  logout() {
+    localStorage.clear();
+    window.location.reload();
+  }
 }
