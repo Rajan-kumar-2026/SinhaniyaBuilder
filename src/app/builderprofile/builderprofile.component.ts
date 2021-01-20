@@ -41,3 +41,4 @@ export class BuilderprofileComponent {
     this.clientDetail.district = district;
   }
 }
+
